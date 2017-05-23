@@ -4,36 +4,3 @@
 
 </head>
 
-
-
-<body>
-  
-  <h1>Welcome to Financer!</h1>
-
-  
-  {{> writeInForm}}
- 
-
-  {{> savedNotes}}
-</body>
-
-
-
-
-
-<template name="writeInForm">
-  
-  <form>
-	<textarea name="typedText"></textarea>
-	<input type="submit" value="Add text">
-  </form>
-</template>
-
-<template name="savedNotes">
-  
-  {{#each showNotes}}
-	<p>{{text}}</p>
-  {{/each}}
- 
-  
-</template>
