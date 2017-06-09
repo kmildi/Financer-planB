@@ -6,7 +6,7 @@ import './methods.js';
 
  Template.savedNotes.helpers({
 	"showNotes":function(){
-	  return Notes.find();
+	  return Notes.find({}, { sort: { createdAt: -1 } });
   	}
   });
   Template.writeInForm.events({
@@ -18,11 +18,11 @@ import './methods.js';
    }
   });
 
-Template.loginForm.events({
-	"submit form":function(evt){
-		evt.preventDefault();
-		var userEmail = evt.target.emailLog.value;
-		Meteor.call('createUser', userEmail);	
-		evt.target.emailLog.value = "";	
-	}
-})
+//Template.loginForm.events({
+	//"submit form":function(evt){
+		//evt.preventDefault();
+		//var userEmail = evt.target.emailLog.value;
+		//Meteor.call('createUser', userEmail);	
+		//evt.target.emailLog.value = "";	
+	//}
+//});

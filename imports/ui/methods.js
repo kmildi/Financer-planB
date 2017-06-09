@@ -2,18 +2,18 @@ import { Meteor } from 'meteor/meteor';
 import '/imports/api/base.js'
 
 
+
+
 Meteor.methods({
 
   'createNotes': function(typedTextVar){
-      Notes.insert({
+     if (! this.userId) {
+      throw new Meteor.Error('not-authorized');
+     }
+     Notes.insert({
         text: typedTextVar,
+        owner: this.userId,
         createdAt: new Date(),
       })
   },
-
-  'createUser': function(userEmail){
-      Users.insert({
-        email: userEmail,
-      })
-  }
 })
