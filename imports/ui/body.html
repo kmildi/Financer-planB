@@ -1,17 +1,32 @@
 
-<body>
+<template name="home">
   
   <h1>Welcome to Financer!</h1>
-
-  <!-- {{> loginForm}}
-   {{> loginPasswordless}} -->
-  <br>
-  {{> loginButtons}}
+<p><a href="{{pathFor 'login'}}">Sign up / Login</a></p>
+<p><a href="{{pathFor 'worksheet'}}">Personal worksheet</a></p>
   <br>
   {{> writeInForm}}
  
   {{> savedNotes}}
-</body>
+</template>
+
+<template name="loginPage">
+  <!-- {{> loginForm}}
+   {{> loginPasswordless}} -->
+  <p><a href="{{pathFor '/'}}">Home</a></p>
+  <br>
+  {{> loginButtons}}
+  <br>
+</template>
+
+<template name="myWorksheet">
+  <p><a href="{{pathFor '/'}}">Home</a></p>
+  <h1>Welcome to my Worksheet!</h1>
+  <br>
+  {{> writeInForm}}
+  <br>
+  {{> savedNotes}}
+</template>
 
 
 

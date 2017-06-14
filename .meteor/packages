@@ -23,3 +23,6 @@ random
 accounts-ui
 poetic:accounts-passwordless
 acemtp:accounts-passwordless
+kadira:flow-router
+kadira:blaze-layout
+arillo:flow-router-helpers

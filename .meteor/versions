@@ -4,6 +4,7 @@ accounts-ui@1.1.9
 accounts-ui-unstyled@1.2.1
 acemtp:accounts-passwordless@0.2.3
 allow-deny@1.0.5
+arillo:flow-router-helpers@0.5.2
 autoupdate@1.3.12
 babel-compiler@6.14.1
 babel-runtime@1.0.1
@@ -17,6 +18,7 @@ caching-compiler@1.1.9
 caching-html-compiler@1.1.2
 callback-hook@1.0.10
 check@1.2.5
+coffeescript@1.0.17
 ddp@1.2.5
 ddp-client@1.3.3
 ddp-common@1.2.8
@@ -38,6 +40,8 @@ http@1.2.12
 id-map@1.0.9
 jperl:match-ex@1.0.0
 jquery@1.11.10
+kadira:blaze-layout@2.3.0
+kadira:flow-router@2.12.1
 launch-screen@1.1.1
 less@2.7.9
 livedata@1.0.18
@@ -86,3 +90,4 @@ underscore@1.0.10
 url@1.1.0
 webapp@1.3.14
 webapp-hashing@1.0.9
+zimme:active-route@2.3.2
