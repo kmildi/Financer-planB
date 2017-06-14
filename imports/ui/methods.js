@@ -1,8 +1,5 @@
 import { Meteor } from 'meteor/meteor';
-import '/imports/api/base.js'
-
-
-
+import '/imports/api/base.js';
 
 Meteor.methods({
 
@@ -16,4 +13,15 @@ Meteor.methods({
         createdAt: new Date(),
       })
   },
+
+  'enterUser': function(userEmail){
+    // if (...) {
+    //  throw new Meteor.Error('already-exist');
+    // }
+     AlternateUsers.insert({
+        email: userEmail,
+        createdAt: new Date(),
+    })
+  },
+
 })

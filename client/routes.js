@@ -8,8 +8,8 @@ FlowRouter.route('/', {
 });
 
 FlowRouter.route('/worksheet', {
-    action: function() {
-       BlazeLayout.render('myWorksheet');
+     action: function() {
+       BlazeLayout.render('worksheet');
   },
 });
 

@@ -24,14 +24,13 @@ function getCookie(cname) {
 }
 
 function checkCookie() {
-    var user=getCookie("username");
+    var user=getCookie("userid");
     if (user != "") {
-        alert("Welcome again " + user);
+       return user
     } else {
-       user = prompt("Please enter your name:","");
-       if (user != "" && user != null) {
-           setCookie("username", user, 365);
-       }
+       alert("Nincs sütije, menjen a beléptetésre?");    
     }
 }
 
+// user = 
+   //    setCookie("userid", user, 365);

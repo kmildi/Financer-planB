@@ -4,22 +4,30 @@
   <h1>Welcome to Financer!</h1>
 <p><a href="{{pathFor 'login'}}">Sign up / Login</a></p>
 <p><a href="{{pathFor 'worksheet'}}">Personal worksheet</a></p>
-  <br>
-  {{> writeInForm}}
- 
-  {{> savedNotes}}
+<p>Here will be the example and kinda stuff</p>
 </template>
 
 <template name="loginPage">
-  <!-- {{> loginForm}}
-   {{> loginPasswordless}} -->
   <p><a href="{{pathFor '/'}}">Home</a></p>
+  {{> loginForm}} 
+  <br>
+  {{> loginPasswordless}} 
   <br>
   {{> loginButtons}}
   <br>
 </template>
 
-<template name="myWorksheet">
+<template name="worksheet">
+  {{checkCookie}}
+  {{#if currentUser}}
+    {{> personalWorksheet}}
+  {{else}}
+   You must be logged in to see your worksheet.
+    {{> loginPage}}
+  {{/if}} 
+  </template>
+
+<template name="personalWorksheet">
   <p><a href="{{pathFor '/'}}">Home</a></p>
   <h1>Welcome to my Worksheet!</h1>
   <br>
