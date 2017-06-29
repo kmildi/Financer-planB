@@ -1,13 +1,13 @@
 // checkCookie();
 
-function setCookie(cname,cvalue,exdays) {
+export const setCookiefn = function setCookie(cname,cvalue,exdays) {
     var d = new Date();
     d.setTime(d.getTime() + (exdays*24*60*60*1000));
     var expires = "expires=" + d.toGMTString();
     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
 
-function getCookie(cname) {
+export const getCookiefn = function getCookie(cname) {
     var name = cname + "=";
     var decodedCookie = decodeURIComponent(document.cookie);
     var ca = decodedCookie.split(';');
@@ -23,8 +23,8 @@ function getCookie(cname) {
     return "";
 }
 
-function checkCookie() {
-    var user=getCookie("userid");
+export const checkCookiefn = function checkCookie() {
+    const user=getCookie("tempId");
     if (user != "") {
        return user
     } else {
@@ -33,4 +33,4 @@ function checkCookie() {
 }
 
 // user = 
-   //    setCookie("userid", user, 365);
+   //    setCookiefn("userid", user, 365);

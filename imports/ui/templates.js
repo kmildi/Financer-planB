@@ -1,6 +1,7 @@
 import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
-import '/imports/ui/cookie.js';
+import { Random } from 'meteor/random';
+import { setCookiefn } from '/imports/ui/cookie.js';
  
 import './templates.html';
 import './methods.js';
@@ -23,14 +24,10 @@ Template.loginForm.events({
 	"submit form":function(evt){
 		evt.preventDefault();
 		var userEmail = evt.target.emailLog.value;
+		var tempId = Random.id();
 		Meteor.call('enterUser', userEmail);
-		setCookie("email", userEmail, 60);	
-		function setCookie(cname,cvalue,exdays) {
-    		var d = new Date();
-   			d.setTime(d.getTime() + (exdays*24*60*60*1000));
-    		var expires = "expires=" + d.toGMTString();
-   			document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-		}
+		setCookiefn("tempId", tempId, 60);	
+		
 		evt.target.emailLog.value = "";	
 	}
 });
