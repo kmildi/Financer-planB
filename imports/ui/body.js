@@ -9,7 +9,7 @@ Meteor.subscribe('notes');
 
 Template.worksheet.helpers({
 	checkCookie: function checkCookie() {
-      var user=getCookie("userid");
+      var user=getCookie("tempId");
         function getCookie(cname) {
             var name = cname + "=";
             var decodedCookie = decodeURIComponent(document.cookie);
@@ -26,7 +26,7 @@ Template.worksheet.helpers({
             return "";
         }
         if (user != "") {
-            return user
+            console.log(user)
         } else {
             alert("Nincs sütije, menjen a beléptetésre?");    
         }

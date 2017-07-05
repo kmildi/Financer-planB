@@ -33,4 +33,4 @@ export const checkCookiefn = function checkCookie() {
 }
 
 // user = 
-   //    setCookiefn("userid", user, 365);
+   //    setCookiefn("tempId", user, 365);
